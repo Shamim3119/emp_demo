@@ -15,15 +15,14 @@ class ControllerEmp extends Controller
 
     function delete(Request $req)
     {
-
         $employee = Employee::find($req->pk_id);
         $employee->delete();
-        return redirect('/');
     }
 
     function execute(Request $req)
     {
         $employee = new Employee;
+        
         if($req->pk_id > 0)
         {
             $employee = Employee::find($req->pk_id);
@@ -49,19 +48,18 @@ class ControllerEmp extends Controller
                    
                 $newname = $path.$filename;
 
-              //  if(move_uploaded_file($_FILES['photo']['tmp_name'],$newname))
-              //  {
+                if(move_uploaded_file($_FILES['photo']['tmp_name'],$newname))
+                {
                     $employee->name = $req->name;
                     $employee->address = $req->address;
                     $employee->phone = $req->phone;
                     $employee->email = $req->email;
                     $employee->photo = $filename;
-               // }
+                }
             }
         }
         else 
         {
-
             $employee->name = $req->name;
             $employee->address = $req->address;
             $employee->phone = $req->phone;

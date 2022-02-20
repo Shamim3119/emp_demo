@@ -4,7 +4,7 @@
           <div class="modal-content" >
             <div class="modal-header" name="clcom">
               <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal_head" id="lblTl"> Over Sales Statement of </h4>
+              <h4 class="modal_head" id="lblTl">Fill flowing attribute of update</h4>
             </div>
             <div class="modal-body" id="lblBd" align="center">
 
