@@ -4,12 +4,17 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers;
 use App\Http\Controllers\ControllerEmp;
  
-/*
-Route::get('/',  function () {
-   return view('employee');
+ /*
+Route::get('delete',  function () {
+   return view('welcome');
 });
  */
 Route::get('/', [ControllerEmp::class, 'show']);
+
+Route::post('execute', [ControllerEmp::class, 'execute']);
+
+Route::post('delete', [ControllerEmp::class, 'delete']);
+
 
 /*
 Single Action Controler

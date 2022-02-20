@@ -2,15 +2,15 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="csrf-token" content="{{ csrf_token() }}" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Employee</title>
         <link href="" rel="stylesheet">
 
-        <!-- Fonts -->
+ 
         <link href="{{ asset('bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
         <link href="{{ asset('plugins/datatables/dataTables.bootstrap.css') }}" rel="stylesheet">
- 
 
         <!-- Styles -->
         <style>
@@ -40,22 +40,9 @@
 
         <script src="{{ asset('plugins/datatables/jquery.dataTables.min.js') }}"></script>
         <script src="{{ asset('plugins/datatables/dataTables.bootstrap.min.js') }}"></script>
+        <script src="{{ asset('js/common.js') }}"></script>
  
- 
-        <script>
-            
- 	    $(function () {
- 	        $('#tbl_main').DataTable({
- 	    	  'paging'      : false,
- 	          'lengthChange': false,
- 	          'searching'   : true,
- 	          'ordering'    : true,
- 	          'info'        : false,
- 	          'autoWidth'   : false
- 	    	    })
- 	       
- 	      });
-
+        
         </script>
         
     </body>
